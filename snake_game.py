@@ -62,7 +62,7 @@ class SnakeGameAI:
         if self.food in self.snake:
             self._place_food()
         
-    def play_step(self, action):
+    def play_step(self):
         # 1. collect user input
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -140,7 +140,7 @@ class SnakeGameAI:
             
 
 if __name__ == '__main__':
-    game = SnakeGame()
+    game = SnakeGameAI()
     
     # game loop
     while True:
